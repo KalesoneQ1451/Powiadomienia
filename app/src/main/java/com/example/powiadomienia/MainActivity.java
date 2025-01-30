@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Button notifySpecial = findViewById(R.id.notificationSpecial);
         notify.setOnClickListener(v->sendNotification());
         notifyLong.setOnClickListener(v->sendNotificationLong());
-        notifySpecial.setOnClickListener(v->NotificationHelper.sendNotification(this, this, "Custom", "Custom powiadomienia", 1));
+        notifySpecial.setOnClickListener(v->NotificationHelper.sendNotification(this, this, "Custom", "Custom powiadomienia", 1, null));
     }
 
     private void createNotificationChannel() {
