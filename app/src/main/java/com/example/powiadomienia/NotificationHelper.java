@@ -34,7 +34,7 @@ public class NotificationHelper {
     private static final String CHANNEL_NAME = "kanał Powiadomień";
     private static final int NOTIFIACTION_ID = 1;
 
-    private static  void sendNotification(AppCompatActivity activity, Context context, String title, String message, int styleType){
+    public static  void sendNotification(AppCompatActivity activity, Context context, String title, String message, int styleType){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU){
             if (context.checkSelfPermission(android.Manifest.permission.POST_NOTIFICATIONS)
                     != PackageManager.PERMISSION_GRANTED) {
@@ -72,6 +72,7 @@ public class NotificationHelper {
                 builder.setStyle(inboxStyle);
                 break;
         }
+        notificationManager.notify(NOTIFIACTION_ID, builder.build());
     }
 
 }
