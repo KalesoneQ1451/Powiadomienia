@@ -87,15 +87,4 @@ public class MainActivity extends AppCompatActivity {
         notificationManager.notify(1, builder.build());
     }
 
-    private NotificationCompat.Builder sendNotificationCustom(String title, int id, int icon, NotificationCompat.Bi style, PendingIntent intent){
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setSmallIcon(icon)
-                .setContentTitle(title)
-                .setStyle(style)
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                .setContentIntent(pendingIntent)
-                .setAutoCancel(true);
-
-        return builder;
-    }
 }
